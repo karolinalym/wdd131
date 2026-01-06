@@ -3,9 +3,47 @@
 <head>
   <meta charset="utf-8">
   <title>WDD 131 | Karolina Lym</title>
+  <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
-  <h1>WDD 131: Dynamic Web Fundamentals</h1>
-  <p>My name is Karolina Lym and this is my course home page.</p>
+  <header>
+    <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="#">LinkedIn</a>
+      <a href="#">I-Learn</a>
+      <a href="#">Scriptures</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Karolina Lym</h1>
+
+    <section class="card">
+      <h2>About Me</h2>
+      <p>
+        My name is Karolina Lym. I am a photographer and creative professional
+        learning dynamic web fundamentals.
+      </p>
+      <img src="images/profile.jpg" alt="Profile image">
+    </section>
+
+    <section class="card">
+      <h2>Utah</h2>
+      <p>
+        Utah is known for its beautiful landscapes, national parks,
+        and strong creative communities.
+      </p>
+      <img src="images/utah.jpg" alt="Utah landscape">
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="currentyear"></span> Karolina Lym
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/getdates.js" defer></script>
 </body>
-</html>
