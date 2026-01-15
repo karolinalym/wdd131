@@ -5,26 +5,28 @@ const button = document.querySelector("#addChapter");
 const list = document.querySelector("#list");
 
 button.addEventListener("click", function () {
-  const chapter = input.value;
+  if (input.value.trim() !== "") {
+    const chapter = input.value.trim();
 
-  if (chapter === ""){
-    input.focus();
-    return;
+    const li = document.createElement("li");
+    const deleteButton = document.createElement("button");
+
+    li.textContent = chapter;
+    deleteButton.textContent = "❌";
+
+    li.appendChild(deleteButton);
+    list.appendChild(li);
+
+    deleteButton.addEventListener("click", function () {
+      list.removeChild(li);
+      input.focus();
+    });
+
+    input.value = "";
   }
 
-  const li = document.createElement("li");
-  const deleteButton = document.createElement("button");
-
-  li.textContent = chapter;
-  deleteButton.textContent = "❌";
-
-  li.appendChild(deleteButton);
-  list.appendChild(li);
-
-  deleteButton.addEventListener("click", function () {
-    list.removeChild(li);
-  });
-
-  input.value = "";
   input.focus();
+});
+input.addEventListener("keydown", function (event) {
+    button.click();
 });
