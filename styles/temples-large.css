@@ -1,30 +1,27 @@
-@media (min-width: 40rem) {
-  /* Desktop: hide hamburger and show nav horizontally */
-  #menu {
-    display: none;
-  }
+header {
+  grid-template-columns: 1fr auto;
+}
 
-  header {
-    position: relative;
-    align-items: center;
-  }
+nav {
+  grid-column: auto;
+}
 
-  nav {
-    width: auto;
-  }
+.navigation {
+  display: flex;
+  gap: 0;
+  background: #2f2f2f;
+  border-radius: 4px;
+  overflow: hidden;
+}
 
-  .navigation {
-    flex-direction: row;
-    gap: 0;
-  }
+.navigation a {
+  padding: 0.75rem 1rem;
+}
 
-  .navigation a {
-    display: block;
-    min-width: 6rem;
-  }
+#menu {
+  display: none;
+}
 
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-  }
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
 }
