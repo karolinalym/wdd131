@@ -1,27 +1,27 @@
-header {
-  grid-template-columns: 1fr auto;
-}
+@media (min-width: 700px) {
+  #menu {
+    display: none;
+  }
 
-nav {
-  grid-column: auto;
-}
+  /* Keep flex on nav */
+  nav {
+    display: flex;
+  }
 
-.navigation {
-  display: flex;
-  gap: 0;
-  background: #2f2f2f;
-  border-radius: 4px;
-  overflow: hidden;
-}
+  .navigation {
+    display: flex;
+    gap: 0;
+  }
 
-.navigation a {
-  padding: 0.75rem 1rem;
-}
+  .navigation li {
+    display: block;
+  }
 
-#menu {
-  display: none;
-}
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-.gallery {
-  grid-template-columns: repeat(3, 1fr);
+  figure {
+    max-width: 320px;
+  }
 }

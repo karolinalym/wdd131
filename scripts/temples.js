@@ -2,25 +2,21 @@
 // Hamburger menu
 // ------------------------------
 const hamButton = document.querySelector("#menu");
-const navigation = document.querySelector(".navigation");
+const nav = document.querySelector("nav");
 
 hamButton.addEventListener("click", () => {
-  navigation.classList.toggle("open");
+  nav.classList.toggle("open");
   hamButton.classList.toggle("open");
 });
 
 // ------------------------------
 // Footer dates
 // ------------------------------
-const yearSpan = document.querySelector("#currentyear");
-const modifiedSpan = document.querySelector("#lastModified");
-
-yearSpan.textContent = new Date().getFullYear();
-modifiedSpan.textContent = document.lastModified;
+document.querySelector("#currentyear").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
 
 // ------------------------------
-// Temple data (must be 9+ items)
-// Image filenames MUST match your /images/temples/ folder
+// Temple data (UPDATE imageUrl to match YOUR filenames exactly)
 // ------------------------------
 const temples = [
   {
@@ -55,7 +51,7 @@ const temples = [
     templeName: "Phoenix Arizona Temple",
     location: "Phoenix, Arizona, USA",
     dedicated: "2014-11-16",
-    area: 64870,
+    area: 64640,
     imageUrl: "images/temples/phoenix-arizona-temple.jpg",
   },
   {
@@ -111,19 +107,13 @@ function createTempleCard(temple) {
   return figure;
 }
 
-function displayTemples(templeList) {
+function displayTemples(list) {
   templeContainer.innerHTML = "";
-  templeList.forEach((temple) => {
-    templeContainer.appendChild(createTempleCard(temple));
-  });
+  list.forEach((t) => templeContainer.appendChild(createTempleCard(t)));
 }
 
 // ------------------------------
 // Filters
-// Old: dedicated before 1900
-// New: dedicated after 2000
-// Large: area > 90000
-// Small: area < 10000
 // ------------------------------
 function showHome() {
   pageTitle.textContent = "Home";
@@ -132,30 +122,22 @@ function showHome() {
 
 function showOld() {
   pageTitle.textContent = "Old";
-  const oldTemples = temples.filter(
-    (t) => new Date(t.dedicated) < new Date("1900-01-01")
-  );
-  displayTemples(oldTemples);
+  displayTemples(temples.filter((t) => new Date(t.dedicated) < new Date("1900-01-01")));
 }
 
 function showNew() {
   pageTitle.textContent = "New";
-  const newTemples = temples.filter(
-    (t) => new Date(t.dedicated) > new Date("2000-01-01")
-  );
-  displayTemples(newTemples);
+  displayTemples(temples.filter((t) => new Date(t.dedicated) > new Date("2000-01-01")));
 }
 
 function showLarge() {
   pageTitle.textContent = "Large";
-  const largeTemples = temples.filter((t) => t.area > 90000);
-  displayTemples(largeTemples);
+  displayTemples(temples.filter((t) => t.area > 90000));
 }
 
 function showSmall() {
   pageTitle.textContent = "Small";
-  const smallTemples = temples.filter((t) => t.area < 10000);
-  displayTemples(smallTemples);
+  displayTemples(temples.filter((t) => t.area < 10000));
 }
 
 // ------------------------------
@@ -170,16 +152,16 @@ navLinks.forEach((link) => {
     navLinks.forEach((l) => l.classList.remove("active"));
     link.classList.add("active");
 
-    const text = link.textContent.trim().toLowerCase();
+    const label = link.textContent.trim().toLowerCase();
 
-    if (text === "home") showHome();
-    else if (text === "old") showOld();
-    else if (text === "new") showNew();
-    else if (text === "large") showLarge();
-    else if (text === "small") showSmall();
+    if (label === "home") showHome();
+    else if (label === "old") showOld();
+    else if (label === "new") showNew();
+    else if (label === "large") showLarge();
+    else if (label === "small") showSmall();
 
-    // close menu after clicking (mobile)
-    navigation.classList.remove("open");
+    // close mobile menu after click
+    nav.classList.remove("open");
     hamButton.classList.remove("open");
   });
 });
