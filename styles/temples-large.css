@@ -1,0 +1,30 @@
+@media (min-width: 40rem) {
+  /* Desktop: hide hamburger and show nav horizontally */
+  #menu {
+    display: none;
+  }
+
+  header {
+    position: relative;
+    align-items: center;
+  }
+
+  nav {
+    width: auto;
+  }
+
+  .navigation {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .navigation a {
+    display: block;
+    min-width: 6rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
