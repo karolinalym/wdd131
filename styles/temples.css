@@ -1,5 +1,5 @@
 :root {
-  --bg: #ffffff;
+  --bg: #e4dbdb;
   --text: #111111;
   --nav-bg: #2f2f2f;
   --nav-text: #ffffff;
@@ -149,5 +149,24 @@ footer {
 }
 
 .navigation.open {
+  display: block;
+}
+/* --- Gallery layout --- */
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr; /* mobile default */
+  padding: 1rem;
+}
+
+/* --- Figure card --- */
+.gallery figure {
+  margin: 0;
+}
+
+/* --- Responsive images --- */
+.gallery img {
+  width: 100%;
+  height: auto;
   display: block;
 }
