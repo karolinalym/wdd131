@@ -1,27 +1,19 @@
 @media (min-width: 700px) {
+  /* hide hamburger button on large screens */
   #menu {
     display: none;
   }
 
-  /* Keep flex on nav */
-  nav {
-    display: flex;
-  }
-
+  /* show nav on large screens */
   .navigation {
     display: flex;
-    gap: 0;
+    gap: 1rem;
+    justify-content: center; 
+    align-items: center;
   }
 
-  .navigation li {
-    display: block;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  figure {
-    max-width: 320px;
+  /* ensure the "open" class doesn't break large layout */
+  .navigation.open {
+    display: flex;
   }
 }

@@ -123,3 +123,31 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
 }
+/* ===== Mobile menu (default) ===== */
+#menu {
+  display: block;
+  font-size: 2rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "✖";
+}
+
+/* Hide nav links until menu is opened (mobile) */
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.navigation.open {
+  display: block;
+}
