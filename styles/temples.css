@@ -65,7 +65,7 @@ nav {
   display: none;
 }
 
-nav.open .navigation li {
+.navigation.open li {
   display: block;
 }
 
