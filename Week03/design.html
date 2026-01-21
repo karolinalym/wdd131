@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Principles</title>
+  <meta name="description" content="Examples of design principles in web design.">
+  <meta name="author" content="Karolina Lym">
+  <link rel="stylesheet" href="styles/design.css">
+</head>
+
+<body>
+  <header>
+    <h1>Design Principles</h1>
+    <p>Karolina Lym</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Visual Hierarchy</h2>
+      <p class="company-name">Apple</p>
+      <a href="https://www.apple.com" target="_blank">https://www.apple.com</a>
+
+      <img src="images/example1.jpg" alt="Screenshot of Apple website showing visual hierarchy">
+
+      <p>
+        Apple’s homepage demonstrates strong visual hierarchy because it guides the user’s attention in a clear order.
+        The largest text (headline) appears first, followed by supporting text, and then the main call-to-action links.
+        The spacing, bold typography, and layout grouping make it obvious what is most important and what actions the user
+        should take next, which improves usability and makes the page easy to scan.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>White Space and Clean Design</h2>
+      <p class="company-name">Google</p>
+      <a href="https://www.google.com" target="_blank">https://www.google.com</a>
+
+      <img src="images/example2.jpg" alt="Screenshot of Google website showing white space and clean design">
+
+      <p>
+        Google’s homepage is a strong example of white space and clean design because it uses minimal elements and a lot of
+        empty space to reduce distractions. The search bar is centered and surrounded by whitespace, which helps the user focus
+        on the main purpose of the page. This simplicity makes the design feel organized, easy to understand, and visually calm.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>PARC: Contrast</h2>
+      <p class="company-name">Spotify</p>
+      <a href="https://www.spotify.com" target="_blank">https://www.spotify.com</a>
+
+      <img src="images/example3.jpg" alt="Screenshot of Spotify website showing contrast in design">
+
+      <p>
+        Spotify is a great example of contrast because it uses dark backgrounds with bright text and colorful album artwork
+        to create clear visual separation. The strong difference between light and dark makes important elements easier to read
+        and helps key sections stand out. Spotify also uses contrast in size and style to emphasize headings, navigation, and
+        interactive elements.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Karolina Lym</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    document.querySelector("#year").textContent = new Date().getFullYear();
+    document.querySelector("#lastModified").textContent = `Last Modified: ${document.lastModified}`;
+  </script>
+</body>
+</html>
