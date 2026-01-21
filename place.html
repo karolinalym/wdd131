@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <title>Utah | WDD 131</title>
   <meta name="description" content="A place page highlighting key facts and weather for Utah." />
   <meta name="author" content="Karolina Lym" />
@@ -21,13 +21,11 @@
     <!-- HERO -->
     <section class="hero">
       <picture>
-        <!-- large hero image -->
         <source
           srcset="images/hero-large.webp"
           media="(min-width: 800px)"
           type="image/webp"
         />
-        <!-- small hero image -->
         <img
           src="images/hero-small.webp"
           alt="Forest landscape in Utah"
@@ -83,7 +81,6 @@
       <section class="card weather" aria-label="Weather">
         <h2>Weather</h2>
 
-        <!-- Mobile view SVG icon -->
         <div class="weather-icon">
           <img src="images/weather.svg" alt="Weather icon" width="48" height="48" loading="lazy" />
         </div>
@@ -100,3 +97,21 @@
           <div class="row">
             <dt>Wind:</dt>
             <dd><span id="wind">10</span> mph</dd>
+          </div>
+          <div class="row">
+            <dt>Wind Chill:</dt>
+            <dd><span id="windchill">N/A</span></dd>
+          </div>
+        </dl>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="currentyear"></span> Karolina Lym | WDD 131
+    </p>
+    <p id="lastmodified"></p>
+  </footer>
+</body>
+</html>
