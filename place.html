@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Utah | WDD 131</title>
+  <meta name="description" content="A place page highlighting key facts and weather for Utah." />
+
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Utah</h1>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <picture>
+        <!-- large hero image -->
+        <source
+          srcset="images/hero-large.webp"
+          media="(min-width: 800px)"
+          type="image/webp"
+        />
+        <!-- small hero image -->
+        <img
+          src="images/hero-small.webp"
+          alt="Forest landscape in Utah"
+          width="1200"
+          height="600"
+          loading="lazy"
+        />
+      </picture>
+    </section>
+
+    <!-- CONTENT GRID (Data + Weather) -->
+    <section class="content">
+      <!-- DATA CARD -->
+      <section class="card data" aria-label="Data">
+        <h2>Data</h2>
+        <dl>
+          <div class="row">
+            <dt>Area:</dt>
+            <dd>84,899 sq mi (219,887 km²)</dd>
+          </div>
+          <div class="row">
+            <dt>Population:</dt>
+            <dd>~3.4 million</dd>
+          </div>
+          <div class="row">
+            <dt>Capital:</dt>
+            <dd>Salt Lake City</dd>
+          </div>
+          <div class="row">
+            <dt>Languages:</dt>
+            <dd>English</dd>
+          </div>
+          <div class="row">
+            <dt>Currency:</dt>
+            <dd>US Dollar (USD)</dd>
+          </div>
+          <div class="row">
+            <dt>Time Zone:</dt>
+            <dd>Mountain (UTC −7)</dd>
+          </div>
+          <div class="row">
+            <dt>Calling Code:</dt>
+            <dd>+1</dd>
+          </div>
+          <div class="row">
+            <dt>Internet TLD:</dt>
+            <dd>.us</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- WEATHER CARD -->
+      <section class="card weather" aria-label="Weather">
+        <h2>Weather</h2>
+
+        <!-- Mobile view SVG icon -->
+        <div class="weather-icon">
+          <img src="images/weather.svg" alt="Weather icon" width="48" height="48" loading="lazy" />
+        </div>
+
+        <dl>
+          <div class="row">
+            <dt>Temperature:</dt>
+            <dd><span id="temp">50</span>°F</dd>
+          </div>
+          <div class="row">
+            <dt>Conditions:</dt>
+            <dd><span id="conditions">Partly Cloudy</span></dd>
+          </div>
+          <div class="row">
+            <dt>Wind:</dt>
+            <dd><span id="wind">10</span> mph</dd>
+          </div>
+          <div class="row">
+            <dt>Wind Chill:</dt>
+            <dd><span id="windchill">N/A</span></dd>
+          </div>
+        </dl>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="currentyear"></span> Karolina Lym | WDD 131
+    </p>
+    <p id="lastmodified"></p>
+  </footer>
+</body>
+</html>
+
