@@ -21,11 +21,12 @@ main {
   padding: 1rem;
 }
 
-/* Force each image to be far apart so lazy loading is obvious */
+
 figure {
-  margin: 0;
-  padding: 2rem 0 120vh; /* huge gap after each image */
+  margin: 4rem 0;
+  min-height: 600px;
 }
+
 
 img {
   display: block;
@@ -34,7 +35,3 @@ img {
   background: #ccc;
 }
 
-/* Debug: red outline means "NOT loaded yet" (still has data-src) */
-img[data-src] {
-  outline: 6px solid red;
-}
