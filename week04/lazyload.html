@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lazy Loading Images</title>
+    <meta name="description" content="WDD 131 Week 04 - Lazy loading images activity." />
+
+    <link rel="stylesheet" href="styles/lazyload.css" />
+    <script src="scripts/lazyload.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Lazy Loading Images</h1>
+      <p>Scroll to load images.</p>
+    </header>
+
+    <main>
+      <!--
+        IMPORTANT:
+        - Keep src as a small placeholder (or 1x1 gif)
+        - Real image path goes in data-src
+        - Keep loading="lazy" (required)
+      -->
+
+      <figure>
+        <img
+          src="images/placeholder.png"
+          data-src="images/photo01.jpg"
+          alt="Sample image 1"
+          width="800"
+          height="500"
+          loading="lazy"
+        />
+        <figcaption>Image 1</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/placeholder.png"
+          data-src="images/photo02.jpg"
+          alt="Sample image 2"
+          width="800"
+          height="500"
+          loading="lazy"
+        />
+        <figcaption>Image 2</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/placeholder.png"
+          data-src="images/photo03.jpg"
+          alt="Sample image 3"
+          width="800"
+          height="500"
+          loading="lazy"
+        />
+        <figcaption>Image 3</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/placeholder.png"
+          data-src="images/photo04.jpg"
+          alt="Sample image 4"
+          width="800"
+          height="500"
+          loading="lazy"
+        />
+        <figcaption>Image 4</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/placeholder.png"
+          data-src="images/photo05.jpg"
+          alt="Sample image 5"
+          width="800"
+          height="500"
+          loading="lazy"
+        />
+        <figcaption>Image 5</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/placeholder.png"
+          data-src="images/photo06.jpg"
+          alt="Sample image 6"
+          width="800"
+          height="500"
+          loading="lazy"
+        />
+        <figcaption>Image 6</figcaption>
+      </figure>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> WDD 131</p>
+    </footer>
+  </body>
+</html>
+
