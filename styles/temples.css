@@ -170,3 +170,14 @@ footer {
   height: auto;
   display: block;
 }
+.gallery section img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.gallery section {
+  text-align: center;
+  margin-bottom: 2rem;
+}

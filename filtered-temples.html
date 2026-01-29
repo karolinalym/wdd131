@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="A filtered temple photo gallery with interactive buttons." />
+  <meta name="author" content="Karolina Lym" />
+
+  <title>Filtered Temples</title>
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" />
+
+  <!-- JS -->
+  <script src="scripts/filtered-temples.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <h1>Temple Album</h1>
+
+    <button id="menu" aria-label="Menu"></button>
+
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="filters">
+  <button id="home">Home</button>
+  <button id="old">Old</button>
+  <button id="new">New</button>
+  <button id="large">Large</button>
+  <button id="small">Small</button>
+  <button id="all">All</button>
+</div>
+
+    <h2 id="page-title">Home</h2>
+    <div id="temples" class="gallery"></div>
+  </main>
+
+  <footer>
+    <p>© <span id="currentyear"></span> Karolina Lym | WDD 131</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
