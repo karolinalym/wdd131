@@ -34,3 +34,6 @@ img {
   background: #ccc;
 }
 
+img[data-src] {
+  outline: 6px solid red;
+}
