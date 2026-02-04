@@ -1,23 +1,26 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Review Form</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="WDD 131 Product Review Form" />
-  <meta name="author" content="Karolina Lym" />
+<title>Product Review</title>
 
-  <link rel="stylesheet" href="styles/form.css" />
-  <script src="scripts/form.js" defer></script>
+<meta name="description" content="WDD 131 Product Review Form. Submit a product rating, installation date, useful features, and a short written review." />
+<meta name="author" content="Karolina Lym" />
+
+<link rel="stylesheet" href="styles/form.css" />
+<script src="scripts/form.js" defer></script>
 </head>
 
 <body>
+
 <header class="site-header">
-  <h1>Product Review</h1>
+<h1>Product Review</h1>
 </header>
 
 <main>
+
 <form class="card" method="get" action="review.html">
 
 <fieldset>
@@ -26,7 +29,7 @@
 <!-- Product -->
 <label for="productName">Product Name <span class="req">*</span></label>
 <select id="productName" name="productName" required>
-  <option value="" disabled selected>Select a product...</option>
+<option value="" disabled selected>Select a product...</option>
 </select>
 
 <!-- Rating -->
@@ -37,16 +40,16 @@
 <input type="radio" id="rate1" name="rating" value="1" required>
 <label for="rate1">1</label>
 
-<input type="radio" id="rate2" name="rating" value="2">
+<input type="radio" id="rate2" name="rating" value="2" required>
 <label for="rate2">2</label>
 
-<input type="radio" id="rate3" name="rating" value="3">
+<input type="radio" id="rate3" name="rating" value="3" required>
 <label for="rate3">3</label>
 
-<input type="radio" id="rate4" name="rating" value="4">
+<input type="radio" id="rate4" name="rating" value="4" required>
 <label for="rate4">4</label>
 
-<input type="radio" id="rate5" name="rating" value="5">
+<input type="radio" id="rate5" name="rating" value="5" required>
 <label for="rate5">5</label>
 
 </div>
@@ -87,6 +90,7 @@
 <button type="submit">Submit Review</button>
 
 </form>
+
 </main>
 
 <footer class="site-footer">
