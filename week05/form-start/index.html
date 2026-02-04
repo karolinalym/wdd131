@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Course proposal application form">
+  <meta name="author" content="Karolina Lym">
+
+  <title>Course Proposal</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- STYLE SHEETS -->
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/small.css" rel="stylesheet">
+  <link href="css/medium.css" rel="stylesheet">
+  <link href="css/large.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <h1>Course Proposal</h1>
+  <h2>Designing Web Forms</h2>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">About</a></li>
+    <li class="active"><a href="#">Propose</a></li>
+    <li><a href="#">Winners</a></li>
+    <li><a href="#">Contact</a></li>    
+  </ul>
+</nav>
+
+<main>
+  <h1>Course Proposal Application</h1>
+
+  <form method="get" action="thanks.html">
+
+    <fieldset>
+      <legend>Applicant Information</legend>
+
+      <label class="top">
+        Full Name*
+        <input type="text" name="fullname" required>
+      </label>
+
+      <label class="top">
+        Email*
+        <input type="email" name="email" required placeholder="name@example.com">
+      </label>
+
+      <label class="top">
+        Phone
+        <input type="tel" name="phone" placeholder="123-555-6789">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Course Details</legend>
+
+      <label class="top">
+        Course Title*
+        <input type="text" name="coursetitle" required>
+      </label>
+
+      <label class="top">
+        Level
+        <select name="level">
+          <option value="">Select…</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </label>
+
+      <label class="top">
+        Course Description*
+        <textarea name="description" required></textarea>
+      </label>
+    </fieldset>
+
+    <input type="submit" value="Submit Proposal" class="submitBtn">
+
+  </form>
+</main>
+
+<footer>
+  &copy; 2026 &bull; Karolina Lym &bull; 123-555-6789
+</footer>
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
