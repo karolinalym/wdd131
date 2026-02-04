@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f4f6f8;
+  color: #111;
+  line-height: 1.5;
+}
+
+.site-header,
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1f2933;
+  color: white;
+}
+
+main {
+  padding: 1rem;
+}
+
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+label,
+.label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.req {
+  color: #b00020;
+}
+
+select,
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.rating,
+.checks {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.rating label,
+.checks label {
+  font-weight: normal;
+}
+
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Desktop Enhancement */
+
+@media (min-width: 700px) {
+  .rating,
+  .checks {
+    gap: 2rem;
+  }
+}
+
