@@ -1,0 +1,19 @@
+@media (min-width: 700px) {
+  /* hide hamburger button on large screens */
+  #menu {
+    display: none;
+  }
+
+  /* show nav on large screens */
+  .navigation {
+    display: flex;
+    gap: 1rem;
+    justify-content: center; 
+    align-items: center;
+  }
+
+  /* ensure the "open" class doesn't break large layout */
+  .navigation.open {
+    display: flex;
+  }
+}

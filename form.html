@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Review</title>
+
+  <meta
+    name="description"
+    content="WDD 131 Product Review Form. Submit a product rating, installation date, useful features, and a short written review."
+  />
+  <meta name="author" content="Karolina Lym" />
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form class="card" method="get" action="review.html">
+      <fieldset>
+        <legend>Review Details</legend>
+
+        <!-- Product -->
+        <label for="productName">Product Name <span class="req">*</span></label>
+        <select id="productName" name="productName" required>
+          <option value="" disabled selected>Select a product...</option>
+        </select>
+
+        <!-- Rating -->
+        <p class="label">Overall Rating <span class="req">*</span></p>
+        <div class="rating" role="group" aria-label="Overall Rating">
+          <input type="radio" id="rate1" name="rating" value="1" required />
+          <label for="rate1">1</label>
+
+          <input type="radio" id="rate2" name="rating" value="2" required />
+          <label for="rate2">2</label>
+
+          <input type="radio" id="rate3" name="rating" value="3" required />
+          <label for="rate3">3</label>
+
+          <input type="radio" id="rate4" name="rating" value="4" required />
+          <label for="rate4">4</label>
+
+          <input type="radio" id="rate5" name="rating" value="5" required />
+          <label for="rate5">5</label>
+        </div>
+
+        <!-- Install Date -->
+        <label for="installDate">Date of Installation <span class="req">*</span></label>
+        <input id="installDate" name="installDate" type="date" required />
+
+        <!-- Features -->
+        <p class="label">Useful Features</p>
+        <div class="checks">
+          <input type="checkbox" id="durability" name="features" value="durability" />
+          <label for="durability">Durability</label>
+
+          <input type="checkbox" id="ease" name="features" value="ease" />
+          <label for="ease">Ease of Use</label>
+
+          <input type="checkbox" id="performance" name="features" value="performance" />
+          <label for="performance">Performance</label>
+
+          <input type="checkbox" id="design" name="features" value="design" />
+          <label for="design">Design</label>
+        </div>
+
+        <!-- Written Review -->
+        <label for="review">Written Review</label>
+        <textarea id="review" name="review" rows="5"></textarea>
+
+        <!-- Your Name -->
+        <label for="userName">Your Name</label>
+        <input id="userName" name="userName" type="text" autocomplete="name" />
+      </fieldset>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Karolina Lym</p>
+  </footer>
+</body>
+</html>

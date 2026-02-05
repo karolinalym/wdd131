@@ -1,0 +1,143 @@
+:root {
+  --bg: #e4dbdb;
+  --text: #111111;
+  --nav-bg: #2f2f2f;
+  --nav-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ===== Header / Nav ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex; /* required */
+  align-items: center;
+  background: var(--nav-bg);
+}
+
+#menu {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#menu::before {
+  content: "≡";
+  font-size: 2rem;
+  line-height: 1;
+}
+
+#menu.open::before {
+  content: "X";
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile default: hidden menu items */
+.navigation li {
+  display: none;
+}
+
+.navigation.open li {
+  display: block;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+  color: var(--nav-text);
+  font-weight: 700;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  text-decoration: underline;
+}
+
+/* ===== Main ===== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#page-title {
+  text-align: center;
+  margin: 1rem 0 2rem;
+  font-size: 2rem;
+}
+
+/* ===== Gallery ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* If you use <figure> cards (temples.html) */
+figure {
+  margin: 0;
+  max-width: 360px;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+}
+
+figcaption {
+  text-align: center;
+  margin-top: 0.7rem;
+  font-weight: 700;
+}
+
+/* If you use <section> cards (filtered-temples.html) */
+.gallery section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery section img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+}
