@@ -49,18 +49,20 @@ if (!params.toString()) {
 
   function addItem(label, value) {
     if (!resultsList) return;
+
     const li = document.createElement("li");
 
     // Build: <strong>Label:</strong> value
     const strong = document.createElement("strong");
-    strong.textContent = `${label}: `;
+    strong.textContent = `${label}: `; // template literal output on page
 
     li.appendChild(strong);
     li.appendChild(document.createTextNode(value));
     resultsList.appendChild(li);
   }
 
-  const productId = params.get("productName") ?? "";
+  // ✅ FIXED to match form.html name attributes
+  const productId = params.get("product") ?? "";
   const productMatch = products.find((p) => p.id === productId);
 
   addItem("Product ID", productId || "(missing)");
@@ -73,5 +75,5 @@ if (!params.toString()) {
   addItem("Features", features.length ? features.join(", ") : "(none)");
 
   addItem("Review", params.get("review") ?? "");
-  addItem("Name", params.get("userName") ?? "");
+  addItem("Name", params.get("name") ?? ""); // ✅ FIXED
 }

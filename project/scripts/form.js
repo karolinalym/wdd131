@@ -1,4 +1,4 @@
-// Product array (used to dynamically build the Product Name <select>)
+// Product array (objects + arrays requirement)
 const products = [
   { id: "p100", name: "Photo Editing - 100 images" },
   { id: "r010", name: "Retouching - 10 images" },
@@ -9,8 +9,8 @@ const products = [
 
 const STORAGE_KEY_LAST_PRODUCT = "wdd131_lastProductId";
 
+// Function 1: build options dynamically (DOM modify)
 function populateProductSelect(selectEl, items) {
-  // Clear any existing options (prevents duplicates if the script runs twice)
   selectEl.innerHTML = `<option value="">Select a product...</option>`;
 
   items.forEach((product) => {
@@ -21,25 +21,25 @@ function populateProductSelect(selectEl, items) {
   });
 }
 
+// Function 2: footer year
 function setFooterYear(yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+// Function 3: restore last selection (localStorage + conditional)
 function restoreLastProduct(selectEl) {
   const savedId = localStorage.getItem(STORAGE_KEY_LAST_PRODUCT);
 
-  // Conditional branching (rubric)
   if (savedId) {
-    // Only set it if it exists in our products list
     const exists = products.some((p) => p.id === savedId);
     if (exists) selectEl.value = savedId;
   }
 }
 
+// Function 4: save selection (localStorage + conditional)
 function saveLastProduct(selectEl) {
   const selected = selectEl.value;
 
-  // Conditional branching (rubric)
   if (selected) {
     localStorage.setItem(STORAGE_KEY_LAST_PRODUCT, selected);
   } else {
@@ -47,27 +47,38 @@ function saveLastProduct(selectEl) {
   }
 }
 
-// Run after DOM is ready (prevents null references)
 document.addEventListener("DOMContentLoaded", () => {
-  const productSelect = document.querySelector("#productName");
+  // DOM selection
+  const productSelect = document.querySelector("#product");
   const yearSpan = document.querySelector("#year");
+  const statusEl = document.querySelector("#status");
 
-  // Defensive checks (avoids console errors if an element is missing)
+  // Defensive checks
   if (yearSpan) setFooterYear(yearSpan);
-
   if (!productSelect) return;
 
-  // Build select options (DOM manipulation + array method + objects)
+  // Arrays + objects + DOM manipulation
   populateProductSelect(productSelect, products);
 
-  // localStorage: restore prior selection
+  // localStorage read
   restoreLastProduct(productSelect);
 
-  // Event listener (rubric)
+  // Show current status on load (template literal output on page)
+  if (statusEl) {
+    const currentName =
+      products.find((p) => p.id === productSelect.value)?.name || "none";
+    statusEl.textContent = `Saved product selection: ${currentName}`;
+  }
+
+  // Event listener + conditional + localStorage write
   productSelect.addEventListener("change", () => {
     saveLastProduct(productSelect);
 
-    // Template literal (rubric) — lightweight, but valid usage
-    console.log(`Saved product selection: ${productSelect.value || "none"}`);
+    // Template literal output on page (rubric-proof)
+    if (statusEl) {
+      const selectedName =
+        products.find((p) => p.id === productSelect.value)?.name || "none";
+      statusEl.textContent = `Saved product selection: ${selectedName}`;
+    }
   });
 });

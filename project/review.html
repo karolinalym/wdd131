@@ -1,41 +1,37 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Review Submitted</title>
-    <meta
-      name="description"
-      content="WDD 131 - Product review confirmation page."
-    />
-    <meta name="author" content="Karolina Lym" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Submitted</title>
+  <meta name="description" content="Displays the submitted review details." />
+  <link rel="stylesheet" href="styles/base.css" />
+  <script src="scripts/review.js" defer></script>
+</head>
 
-    <link rel="stylesheet" href="styles/form.css" />
-    <script src="scripts/review.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <h1>Thank You!</h1>
-    </header>
+<body>
+  <header>
+    <h1>Thank You!</h1>
 
-    <main>
-      <section class="card">
-        <h2>Review Submitted</h2>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="form.html">Review Form</a></li>
+        <li><a href="review.html">Submitted Reviews</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <p><strong>Reviews completed:</strong> <span id="count">0</span></p>
+  <main>
+    <section>
+      <h2>Review Submitted</h2>
+      <p>Total reviews submitted on this device: <strong><span id="count">0</span></strong></p>
+      <ul id="results"></ul>
+    </section>
+  </main>
 
-        <h3>Your Submission</h3>
-        <ul id="results"></ul>
-
-        <p>
-          <a href="form.html">Submit another review</a>
-        </p>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Karolina Lym</p>
-    </footer>
-  </body>
+  <footer>
+    <p>© <span id="year"></span> Karolina Lym</p>
+  </footer>
+</body>
 </html>
-
